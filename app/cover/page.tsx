@@ -517,7 +517,7 @@ ${slogan ? `标语：${slogan}` : ''}
             <Link href="/cover" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
               封面设计
             </Link>
-            <a href="#" className="text-gray-600 hover:text-gray-900">SVG</a>
+            
           </div>
         </nav>
       </header>
