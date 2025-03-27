@@ -9,7 +9,6 @@ const nextConfig = {
     };
     return config;
   },
-  optimizeFonts: false,
   images: {
     remotePatterns: [
       {
@@ -22,6 +21,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY,
+  }
 }
 
 module.exports = nextConfig 

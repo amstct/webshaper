@@ -101,4 +101,15 @@ export async function getCoverResults() {
     });
     return [];
   }
+}
+
+// 为 any 类型添加具体的类型定义
+interface CustomError {
+  message: string;
+  code?: string;
+}
+
+// 替换 any 类型
+function handleError(error: CustomError) {
+  // ... 
 } 
