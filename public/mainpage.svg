@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 封面背景层 -->
+  <rect x="16" y="16" width="32" height="32" rx="2" fill="url(#coverGradient)"/>
+  <!-- 标题文字条 -->
+  <rect x="20" y="20" width="24" height="6" fill="#FFF" opacity="0.8"/>
+  <!-- 装饰元素 -->
+  <circle cx="40" cy="40" r="4" fill="#FFF" opacity="0.6"/>
+  <path d="M28 40L34 36L40 40L34 44L28 40Z" fill="#FFF" opacity="0.6"/>
+  <!-- 小红书风格渐变 -->
+  <defs>
+    <linearGradient id="coverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2442"/>
+      <stop offset="100%" stop-color="#FF9E9E"/>
+    </linearGradient>
+  </defs>
+</svg>

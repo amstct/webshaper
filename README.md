@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebShaper - AI 驱动的网页内容生成工具
 
-## Getting Started
+## 项目概述
 
-First, run the development server:
+WebShaper 是一个基于 AI 的网页内容生成工具，专注于为用户提供高质量的内容设计服务。目前支持小红书风格封面设计和信息卡片生成两大核心功能。
 
+## 功能详细说明
+
+### 1. 封面设计功能（/cover）
+
+#### 1.1 基础功能
+- 支持自定义封面文案输入
+- 提供账号名称设置
+- 可选添加个性化标语
+- 多种预设风格选择
+
+#### 1.2 设计规范
+- 封面尺寸固定为 3:4 比例
+- 文字内容占据页面 70% 以上空间
+- 采用 3-4 种不同字号营造层次感
+- 关键词使用最大字号突出显示
+- 支持特殊文字处理（描边、高亮、不同颜色）
+
+#### 1.3 技术特性
+- 使用 Google Fonts 确保字体显示效果
+- 支持实时预览生成结果
+- 提供 HTML 代码和可视化预览切换
+- 一键导出为 PNG 图片功能
+- 响应式设计适配不同设备
+
+#### 1.4 AI 生成
+- 集成 ARK API 进行内容生成
+- 支持流式响应，实时显示生成过程
+- 智能提取并优化用户输入的文案
+- 自动应用设计最佳实践
+
+### 2. 信息卡片功能（/card）
+
+#### 2.1 基础功能
+- 支持自定义内容输入
+- 现代简约风格设计
+- 智能排版和布局优化
+
+#### 2.2 设计规范
+- 固定尺寸比例（1080x1440）
+- 清晰的视觉层次结构
+- 专业的排版和间距处理
+- 支持渐变背景和阴影效果
+
+#### 2.3 技术特性
+- 使用 CSS Grid/Flexbox 布局
+- 支持动画和交互效果
+- 响应式设计
+- 一键导出图片功能
+
+## 技术架构
+
+### 前端技术栈
+- Next.js 框架
+- TypeScript 语言
+- Tailwind CSS 样式框架
+- React Hooks 状态管理
+
+### 后端集成
+- ARK API 接口集成
+- 流式数据处理
+- 文件导出处理
+
+### 核心模块
+1. 用户输入处理模块
+2. AI 内容生成模块
+3. 实时预览渲染模块
+4. 图片导出处理模块
+
+## 使用流程
+
+### 封面设计流程
+1. 选择设计风格
+2. 输入封面文案
+3. 填写账号信息
+4. 可选添加标语
+5. 点击生成按钮
+6. 预览生成结果
+7. 导出为图片
+
+### 信息卡片流程
+1. 输入卡片内容
+2. 系统智能排版
+3. 预览生成效果
+4. 导出最终图片
+
+## 项目特色
+
+1. **智能生成**
+   - AI 驱动的内容生成
+   - 智能优化排版布局
+   - 自动应用设计最佳实践
+
+2. **专业设计**
+   - 遵循现代设计趋势
+   - 注重视觉层次和美感
+   - 确保内容清晰可读
+
+3. **便捷操作**
+   - 简单直观的界面
+   - 实时预览功能
+   - 一键导出图片
+
+4. **技术创新**
+   - 流式响应处理
+   - 动态内容渲染
+   - 响应式设计适配
+
+## 环境要求
+
+- Node.js 18.0 或以上
+- 现代浏览器支持
+- ARK API 密钥配置
+
+## 安装部署
+
+1. 克隆项目代码
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [项目地址]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 安装依赖
+```bash
+cd mypage
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 配置环境变量
+```bash
+cp .env.example .env.local
+# 编辑 .env.local 添加必要的配置
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. 启动开发服务器
+```bash
+npm run dev
+```
 
-## Learn More
+## 注意事项
 
-To learn more about Next.js, take a look at the following resources:
+1. 确保 API 密钥正确配置
+2. 注意内容生成的速率限制
+3. 图片导出需要浏览器支持
+4. 建议使用现代浏览器访问
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 未来规划
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. 增加更多设计模板
+2. 支持自定义样式配置
+3. 添加批量生成功能
+4. 优化图片导出质量
+5. 增加更多社交平台支持
 
-## Deploy on Vercel
+## 贡献指南
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+欢迎提交 Issue 和 Pull Request 来帮助改进项目。请确保遵循项目的代码规范和提交规范。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 许可证
+
+© 2025 CT creation. All rights reserved.
